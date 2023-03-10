@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+
+  <!-- 登录container -->
+<div class="login-layout">
+       <!-- Carousel -->
+<div id="demo-login" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for('static', filename='img/注册宣传4.png')}}" alt="注册宣传" class="d-block" width="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='img/注册宣传3.png') }}" alt="注册宣传" class="d-block" width="100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <!-- 左侧内容 -->
+</div>
+<div class="container-login">
+  <h1>会员登记</h1>
+  <form action="/login" method="POST">
+    <div class="mb-3 mt-3">
+      <label for="用户名">用户名：</label>
+      <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username">
+    </div>
+    <div class="mb-3">
+      <label for="手机号">手机号：</label>
+      <input type="email" class="form-control" id="email" placeholder="请输入手机号" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="邮箱">邮箱：</label>
+        <input type="password" class="form-control" id="password" placeholder="请输入邮箱" name="password">
+      </div>
+      <div class="mb-3">
+        <label for="内容">请选择续费月数（每月30元）：</label>
+      <input type="number" id="tentacles" name="jiangjinzonge">
+    </div>
+    <button type="submit" class="btn btn-primary">确认</button>
+  </form>
+</div>
+
+</div>
+
+{% endblock %}

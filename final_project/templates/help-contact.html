@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+
+    <div class="body_container">
+        <div class="base-layout">
+                      <!-- 左侧内容 -->
+          <div class="layout-main">
+            <div class="article-list-container">
+                <div class="article-list-body">
+                  <div class="article-card">
+                    <div class="article-card-title">
+                        <h1 class="article-card-h1" title="联系我们">联系我们</h1>
+                        </div>
+
+                        <div class="race-content">
+                            <div class="content-details">
+                              如果各位旅行者有任何问题，欢迎通过电话与邮箱向我们反馈，我们会持续整理并回答旅行者们的问题：<br>
+                              邮箱：GenshinContest@ys.com <br>
+                              电话：123-666-1234 <br>
+                              工作时间：周一~周五10:00 - 22:00; 周六~周日14:00 - 18:00 <br>
+                          </div>
+                          <div class="content-details">
+                            <b>我们也欢迎旅行者留下自己的联系方式和问题反馈，当我们看到后会立刻联系您：</b><br>
+                            <form action="/action_page.php">
+                              <div class="mb-3 mt-3">
+                                <label for="称呼">称呼：</label>
+                                <input type="text" class="form-control" id="username" placeholder="请输入您的称呼" name="用户名">
+                              </div>
+                              <div class="mb-3">
+                                <label for="邮箱">邮箱：</label>
+                                <input type="email" class="form-control" id="email" placeholder="请输入您的邮箱" name="邮箱">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="手机号">手机号：</label>
+                                  <input type="password" class="form-control" id="phone" placeholder="请输入您的手机号" name="手机号">
+                                </div>
+                              <div class="mb-3">
+                                  <label for="问题描述">问题描述</label>
+                                   <textarea class="form-control" id="editor" placeholder="请输入问题" name="bio" rows="5"></textarea>
+                                </div>
+                              <button type="submit" class="btn btn-primary">确认</button>
+                            </form>
+                        </div>
+
+                        </div>
+                        </div>
+                    </div>
+
+
+                      </div>        
+        </div>
+        <div class="sub-layout">
+            <!-- 右侧发布栏 -->
+            <div class="home-post">
+              {% if session.username %}
+              <div class="home-post-header">发布</div>
+              <div class="home-post-block">
+                <p><button class="w3-button w3-yellow" onclick="window.location.href='/postrace'">发起比赛</button></p>
+                <p class="home-post-explain">为你心爱的角色发起悬赏</p>
+              </div>
+              <div class="home-post-block">
+                <p><button class="w3-button w3-yellow" onclick="window.location.href='/post-zhongchou'">发起众筹</button></p>
+                <p class="home-post-explain">与志同道合的伙伴一起筹办比赛</p>
+              </div>
+              {% else %}
+              <div class="home-post-block">
+                <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+                <p class="home-post-explain">登录后可以发布内容</p>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+        </div>
+
+
+
+        {% endblock %}
+

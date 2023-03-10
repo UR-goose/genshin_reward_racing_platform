@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='img/icon-192x192.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+    <title>剑斗奇谭俱乐部</title>
+    <meta name="DESCRIPTION" content="{{meta_desc}}"/>
+    <meta name="KEYWORDS" content="{{meta_keywords}}"/>
+    
+    
+
+</head>
+<body>
+  <!-- 页首导航栏 -->
+  <div class="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='img/LOGO.jpg') }}" alt="Logo" style="width:80px;" >
+          </a>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">主页</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">赛事信息</a>
+                <ul class="dropdown-menu">
+                  <!-- <li><a class="dropdown-item" href="/past-list.html">往期赛事</a></li> -->
+                  <li><a class="dropdown-item" href="/pastrace-list">往期赛事</a></li>
+                  <li><a class="dropdown-item" href="/currentrace-list">当期赛事</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/topic-post-list">赛事讨论</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/zhongchou-list">众筹列表</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">帮助</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/help-problems">常见问题</a></li>
+                  <li><a class="dropdown-item" href="/help-contact">联系我们</a></li>
+                </ul>
+                {% if session.username %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">发布</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/postrace">发起赛事</a></li>
+                  <li><a class="dropdown-item" href="/postpost">发布帖子</a></li>
+                  <li><a class="dropdown-item" href="/post-zhongchou">发起众筹</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/membership">空月祝福</a>
+              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">我的</a>
+                    <ul class="dropdown-menu">
+                      <!-- <li><a class="dropdown-item" href="/personal-profile.html">个人主页</a></li> -->
+                      <li><a class="dropdown-item" href="/personal-profile/{{ session.username }}">个人主页</a></li>
+        
+                      <!-- <li><a class="dropdown-item" href="/index.html">登出账号</a></li> -->
+                      <li><a class="dropdown-item" href="/logout">登出账号</a></li>
+                    </ul>
+                  </li>
+                {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="/login">登录</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register">注册</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    {% block header %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+
+     <!-- 页脚 -->
+<div class="footer">
+    <div class="layout footer__inner">
+        <div class="footer__copyright">
+          <p>和谐社区，文明发言，谨防电信诈骗</p>
+          <p class="copyright text-muted">Copyright &copy; Ayato's Website 2022</p>
+        </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  <script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+  <script type="text/javascript">
+       CKEDITOR.replace('editor')
+  </script>
+  <script>
+   function search(e) {
+    let searched = document.getElementById("search").value.trim();
+    if (searched !== "") {
+      let text = document.getElementById("text").innerHTML;
+      let re = new RegExp(searched,"g"); // search for all instances
+          let newText = text.replace(re, `<mark>${searched}</mark>`);
+          document.getElementById("text").innerHTML = newText;
+    }
+  }
+ </script>
+ <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
+
+

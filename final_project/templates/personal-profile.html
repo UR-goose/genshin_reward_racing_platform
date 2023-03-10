@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+ <!-- 页面主体 -->
+ <div class="body_container">
+    <div class="base-layout">
+                  <!-- 左侧内容 -->
+      <div class="layout-main">
+        <div class="article-list-container">
+            <div class="article-list-body">
+              <div class="article-card">
+                <div class="article-card-title">
+                    <h1 class="article-card-h1" title="我的主页">我的主页</h1>
+                </div>
+              </div>
+              <form action="/personal-profile/{{session.username}}" method="POST" enctype="multipart/form-data">
+                <div class="profile-mb-3">
+                 
+                 {% for row in entries %}
+                 <input type="hidden" class="form-control" id="id" name="id" 
+                                       value="{{row['id']}}">
+
+                 <div lass="mb-3 mt-3">
+                  <label for="用户名">用户名：</label>
+                  <input type="text" class="form-control" id="title" placeholder="Enter username" name="username" 
+                  value="{{row['username']}}">
+                 </div>
+                 
+                 
+                 <div lass="mb-3 mt-3">
+                  <label for="邮箱/账号">邮箱/账号：</label>
+                  <input type="text" class="form-control" id="title" placeholder="Enter email" name="email" 
+                         value="{{row['email']}}"> 
+                 </div>
+
+                 <div class="mb-3">
+                  <label for="密码">密码：</label>
+                  <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password"
+                  value="{{row['password']}}">
+                </div>
+                   
+                 <div lass="mb-3 mt-3">
+                  <label for="个人简介">个人简介</label>
+                  <textarea class="form-control" id="editor" name="bio" rows="3">{{row['bio']}}</textarea>
+                 </div>
+                 </div>
+                 
+                 {% endfor %}
+                 <div class="content-img">
+                  <ul class="content-img-list">
+                    <!-- <li class="content-img-list-item"><img src="https://www.baidu.com/img/bd_logo1.png" alt=""><a class="delete-btn"><i class="ico-delete"></i></a></li> -->
+                  </ul>
+                  <div class="file">
+                    <i class="ico-plus"></i>上传头像：支持jpg/png<input type="file" name="file" accept="image/*" id="upload" >
+                  </div>	
+                <div class="profile-submit">
+                <button type="submit" class="btn btn-primary">确认修改</button>
+                </div>
+                
+              </form>
+              <!-- <div class="article-card">
+                <!帖子1 -->
+                <!-- <div><b><h4>我的帖子</h4></b></div>
+                <br>
+                <div class="article-card-header">
+                  <div class="article-card-userinfo">
+                    <div class="article-card-user">
+                      <a href="#" class="user-card-link" target="_blank">
+                        <div class="user-card-avater">
+                          <img class="avatar-img" src="{{ url_for('static', filename='img/我的头像.jpg') }}" alt="头像">
+                        </div>
+                      </a>
+                      <div class="user-card-info">
+                        <a href="#" class="account-user-card-link" target="blank" title="纯爱战士">
+                          <span class="account-user-card-name">纯爱战士</span>
+                        </a>
+                      </div>
+                      <div>
+                        <p class="post-time">11-23</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="article-card-link" target="_blank">
+                  <div class="article-card-title">
+                    <h3 class="article-card-h3" title="看到有个大佬只用了一个金,好厉害">看到有大佬只用了一个金,好厉害!</h3>
+                    </div>
+                    <div class="article-card-content">
+                      这个手部乘区加成也太多了
+                    </div>
+                  </a>
+                    <div class="article-card-footer">
+                      <div class="mmv-topic-label-selector mmv-article-card__topics">
+                        <div class="mmv-topic-label-selector__item">
+                          <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                            <span>《记仇杯》第一季</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div  class="article-card-data">
+                      <div class="article-card-data-item">
+                        <i class="mmv-icon iconfont icon-liulanshu"></i>
+                        <span>9万+</span>
+                      </div>
+                      <div class="article-card-data-item">
+                        <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                        <span>2269</span>
+                      </div>  -->
+                      <!-- <div class="article-card-data-item">
+                        <i class="mmv-icon iconfont icon-dianzan"></i>
+                        <span>2579</span>
+                      </div> -->
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                  </div>
+                  <div>
+
+                  </div>
+
+
+                  </div> 
+
+
+
+
+  </div>
+  <div class="sub-layout">
+    <div class="article-page-author">
+      {% for row in entries %}
+        <a href="#" target="_blank">
+           <div class="article-poster-avatar">
+               <img src="{{row['image_file']}}" alt="我的头像">
+            </div>
+         </a>
+         <div class="article-poster-info">
+            <a href="#" target="_blank">
+              <span>{{row['username']}}</span>
+            </a>
+         </div>
+         {% endfor %}
+       </div>
+    <!-- 右侧发布栏 -->
+<!-- 推荐栏目 -->
+<!-- <div class="sub-recommend">
+<div class="sub-recommend-header">
+<h2 class="sub-recommend-header-title">我的众筹</h2>
+</div>
+<div class="sub-recommend-body"> -->
+<!-- 推荐1 -->
+<!-- <div class="sub-recommend-list">
+<div class="sub-recommend-list-card">
+<a href="#" class="sub-recommend-list-card-cover" target="_blank">
+<img src="{{ url_for('static', filename='img/优菈.png') }}" alt="优菈" width:="50px" height="50px";>
+</a>
+<div class="sub-recommend-list-card-info">
+<a href="#" class="sub-recommend-list-card-link">
+<p class="sub-recommend-list-card-name">《记仇杯》第一季</p>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+</div> -->
+
+<!-- 我的比赛 -->
+<!-- <div class="sub-recommend">
+<div class="sub-recommend-header">
+<h2 class="sub-recommend-header-title">我的比赛</h2>
+</div>
+<div class="sub-recommend-body"> -->
+<!-- 推荐1 -->
+<!-- <div class="sub-recommend-list">
+<div class="sub-recommend-list-card">
+<a href="#" class="sub-recommend-list-card-cover" target="_blank">
+<img src="{{ url_for('static', filename='img/优菈.png') }}" alt="优菈" width:="50px" height="50px";>
+</a>
+<div class="sub-recommend-list-card-info">
+<a href="#" class="sub-recommend-list-card-link">
+<p class="sub-recommend-list-card-name">《记仇杯》第一季</p>
+</a>
+<a href="#" class="sub-recommend-list-card-link">
+<p class="sub-recommend-list-card-name">修改</p>
+</a> -->
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+            
+                    </div>
+
+                    
+{% endblock %}

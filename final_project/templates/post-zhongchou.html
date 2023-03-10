@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+        <!-- 发起众筹 -->
+        <div class="login-layout">
+        <div class="container mt-3">
+            <h1>发起众筹</h1>
+            <div class="text-center">
+              {% if msg %}
+                 <div class="alert alert-warning" role="alert">{{msg}}</div>
+              {% endif %}
+          </div>
+            <form action="/post-zhongchou" method="POST">
+              <!-- <input type="hidden" class="form-control" id="id" name="id"> -->
+              <div class="mb-3 mt-3">
+                <label for="众筹标题">众筹标题：</label>
+                <input type="text" class="form-control" id="article-title" placeholder="请输入标题" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="众筹描述">众筹描述：</label>
+                 <textarea class="form-control" id="editor" placeholder="请描述您的众筹请求" name="body" rows="15"></textarea>
+              </div>
+                <div class="mb-3">
+                  <label for="群聊号码">群聊信息：</label>
+                   <textarea class="form-control" id="editor" placeholder="请输入您的群聊信息" name="groupinfo" rows="1"></textarea>
+                </div>
+              <br>
+              <div class="mb-3">
+                <label for="悬赏角色">悬赏角色：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入您的悬赏角色" name="character" rows="1"></textarea>
+              </div>
+              <input type="hidden" name="_method" value="">
+              <button type="submit" class="btn btn-primary">确认发布</button>
+            </form>
+            <br>
+          </div>
+        </div>
+
+{% endblock %}

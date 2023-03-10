@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+        <!-- 发布帖子 -->
+        <div class="login-layout">
+        <div class="container mt-3">
+            <h1>提交成绩</h1>
+            {% if msg %}
+            <div class="alert alert-warning" role="alert">{{msg}}</div>
+            {% endif %}
+            <form action="/postrecord" method="POST">
+              <label for="sel1" class="form-label">队伍配置：</label>
+             <input type="text" class="form-control" id="team" placeholder="请输入队伍配置" name="teamcob">
+              <br>
+              <div class="mb-3">
+                <label for="备注">视频链接：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入您的视频链接" name="videolink" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="备注">备注：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入备注" name="beizhu" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="备注">收款信息：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入您的收款信息" name="payment" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="备注">赛事：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入您参加的赛事" name="racename2" rows="3"></textarea>
+              </div>
+                    </select>
+                    <br>
+                    <label for="sel1" class="form-label">请选择想参加的赛道：</label>
+                    <select class="form-select" id="sel1" name="saidao">
+                      <option>赛道一</option>
+                      <option>赛道二</option>
+                      <option>赛道三</option>
+                      <option>赛道四</option>
+                      <option>赛道五</option>
+                      <option>赛道六</option>
+                    </select>
+                    <br>
+               <div class="mb-3">
+                <label for="备注">成绩（秒）：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入您的成绩" name="time_consume" rows="1"></textarea>
+              </div>
+
+              <!-- <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> 记住我
+                </label>
+              </div> -->
+              <button type="submit" class="btn btn-primary">确认提交</button>
+            </form>
+          </div>
+        </div>
+{% endblock %}

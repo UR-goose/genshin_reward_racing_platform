@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+    <!-- 页面主体 -->
+<div class="body_container">
+<div class="base-layout">
+  <div class="layout-main">
+     <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='img/首页banner1.png') }}" alt="首页banner" class="d-block" width="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='img/首页banner.png') }}" alt="首页banner" class="d-block" width="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='img/首页banner1.png') }}" alt="首页banner" class="d-block" width="100%" >
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <!-- 左侧内容 -->
+</div>
+  <div class="article-list-container">
+    <div class="article-list-body">
+      <div class="article-card">
+        <!-- 众筹1 -->
+        <div class="article-card-header">
+          <div class="article-card-userinfo">
+            <div class="article-card-user">
+              <a href="#" class="user-card-link" target="_blank">
+                <div class="user-card-avater">
+                  <img class="avatar-img" src="{{ url_for('static', filename='img/我的头像.jpg') }}" alt="头像">
+                </div>
+              </a>
+              <div class="user-card-info">
+                <a href="#" class="account-user-card-link" target="blank" title="纯爱战士">
+                  <span class="account-user-card-name">纯爱战士</span>
+                </a>
+              </div>
+              <div>
+                <p class="post-time">11-23</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="article-card-link" target="_blank">
+          <div class="article-card-title">
+            <h3 class="article-card-h3" title="【众筹开启】3.2甘雨“仙麟杯”竞速！】">【众筹开启】3.2甘雨“仙麟杯”竞速！】</h3>
+            </div>
+            <div class="article-card-content">
+              还有人记得曾经的甘雨吗？又到了证明我们的时候了，帖主提供启动资金600，更多的奖金才有更多的赛道！诚邀各位甘雨厨参与众筹！
+            </div>
+          </a>
+            <div class="article-card-footer">
+              <div class="mmv-topic-label-selector mmv-article-card__topics">
+                <div class="mmv-topic-label-selector__item">
+                  <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                    <span>甘雨</span>
+                  </a>
+                </div>
+              </div>
+              <div  class="article-card-data">
+              <div class="article-card-data-item">
+                <i class="mmv-icon iconfont icon-liulanshu"></i>
+                <span>9万+</span>
+              </div>
+              <!-- <div class="article-card-data-item">
+                <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                <span>2269</span>
+              </div> -->
+              <div class="article-card-data-item">
+                <i class="mmv-icon iconfont icon-dianzan"></i>
+                <span>2579</span>
+              </div>
+            </div>
+            </div>
+          </div>
+      <!-- <div class="article-card">
+            众筹2
+            <div class="article-card-header">
+              <div class="article-card-userinfo">
+                <div class="article-card-user">
+                  <a href="#" class="user-card-link" target="_blank">
+                    <div class="user-card-avater">
+                      <img class="avatar-img" src="{{ url_for('static', filename='img/我的头像.jpg') }}" alt="头像">
+                    </div>
+                  </a>
+                  <div class="user-card-info">
+                    <a href="#" class="account-user-card-link" target="blank" title="纯爱战士">
+                      <span class="account-user-card-name">纯爱战士</span>
+                    </a>
+                  </div>
+                  <div>
+                    <p class="post-time">11-23</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="article-card-link" target="_blank">
+              <div class="article-card-title">
+                <h3 class="article-card-h3" title="【众筹开启】3.2甘雨“仙麟杯”竞速！】">【众筹开启】3.2甘雨“仙麟杯”竞速！】</h3>
+                </div>
+                <div class="article-card-content">
+                  还有人记得曾经的甘雨吗？又到了证明我们的时候了，帖主提供启动资金600，更多的奖金才有更多的赛道！诚邀各位甘雨厨参与众筹！
+                </div>
+              </a>
+                <div class="article-card-footer">
+                  <div class="mmv-topic-label-selector mmv-article-card__topics">
+                    <div class="mmv-topic-label-selector__item">
+                      <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                        <span>甘雨</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div  class=article-card-data>
+                  <div class="article-card-data-item">
+                    <i class="mmv-icon iconfont icon-liulanshu"></i>
+                    <span>9万+</span>
+                  </div>
+                  <!- <div class="article-card-data-item">
+                    <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                    <span>2269</span>
+                  </div> -->
+                  <!-- <div class="article-card-data-item">
+                    <i class="mmv-icon iconfont icon-dianzan"></i>
+                    <span>2579</span>
+                  </div>
+                </div>
+                </div>
+          </div> --> 
+
+      </div>
+<div class="article-list-footer">
+  <div class="loadmore">
+    <button>点击加载更多</button>
+  </div>
+
+</div>
+    </div>
+        </div>
+<!-- 右侧发布栏 -->
+<div class="sub-layout">
+  <div class="home-post">
+    {% if session.username %}
+    <div class="home-post-header">发布</div>
+    <div class="home-post-block">
+      <p><button class="w3-button w3-yellow" onclick="window.location.href='/postrace'">发起比赛</button></p>
+      <p class="home-post-explain">为你心爱的角色发起悬赏</p>
+    </div>
+    <div class="home-post-block">
+      <p><button class="w3-button w3-yellow" onclick="window.location.href='/post-zhongchou'">发起众筹</button></p>
+      <p class="home-post-explain">与志同道合的伙伴一起筹办比赛</p>
+    </div>
+    {% else %}
+    <div class="home-post-block">
+      <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+      <p class="home-post-explain">登录后可以发布内容</p>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- 推荐栏目 -->
+<div class="sub-recommend">
+    <div class="sub-recommend-header">
+      <h2 class="sub-recommend-header-title">推荐比赛</h2>
+      <div class="sub-recommend-title-link">
+        <a href="/currentrace-list" class="sub-recommend-title-link">更多</a>
+      </div>
+    </div>
+    <div class="sub-recommend-body">
+      <!-- 推荐1 -->
+      <div class="sub-recommend-list">
+        <div class="sub-recommend-list-card">
+          <a href="#" class="sub-recommend-list-card-cover" target="_blank">
+            <img src="{{ url_for('static', filename='img/心海.png') }}" alt="心海" width:="50px" height="50px";>
+          </a>
+          <div class="sub-recommend-list-card-info">
+            <a href="https://bbs.nga.cn/read.php?tid=33844574&fav=0d2414f2" class="sub-recommend-list-card-link">
+              <p class="sub-recommend-list-card-name">《眠龙杯》第一季</p>
+            </a>
+          </div>
+</div>
+
+<!-- 推荐2 -->
+      <div class="sub-recommend-list">
+        <div class="sub-recommend-list-card">
+          <a href="#" class="sub-recommend-list-card-cover" target="_blank">
+            <img src="{{ url_for('static', filename='img/优菈.png') }}" alt="优菈" width:="50px" height="50px";>
+          </a>
+          <div class="sub-recommend-list-card-info">
+            <a href="https://bbs.nga.cn/read.php?tid=33384174&fav=8a876880" class="sub-recommend-list-card-link">
+              <p class="sub-recommend-list-card-name">《记仇杯》第一季</p>
+            </a>
+          </div>
+</div>
+
+
+      </div>
+      <!-- 推荐3 -->
+      <div class="sub-recommend-list">
+        <div class="sub-recommend-list-card">
+          <a href="#" class="sub-recommend-list-card-cover" target="_blank">
+            <img src="{{ url_for('static', filename='img/钟离.png') }}" alt="钟离" width:="50px" height="50px";>
+          </a>
+          <div class="sub-recommend-list-card-info">
+            <a href="https://bbs.nga.cn/read.php?tid=34027676&fav=fccc57e3" class="sub-recommend-list-card-link">
+              <p class="sub-recommend-list-card-name">第一届钟离“伊布”杯</p>
+            </a>
+          </div>
+</div>
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+{% endblock %}

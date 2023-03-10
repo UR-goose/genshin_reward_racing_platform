@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/pastrace-list</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/currentrace-list</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/racetopic-list</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/zhongchou-list</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/help-problems</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/help-contact</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/login</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/register</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/pastrace-details</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/currentrace-details</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/postrecord</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/topic-post-list</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/zhongchou-details/1</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/zhongchou-details/2</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/zhongchou-details/3</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/zhongchou-details/4</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/zhongchou-list/1</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/race-rank</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/post_details/1</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/post_details/2</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/post_details/3</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://ayato0214.pythonanywhere.com/topic-post-list/1</loc>
+  <lastmod>2022-12-03T13:08:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

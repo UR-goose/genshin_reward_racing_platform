@@ -1,0 +1,325 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+
+    <div class="body_container">
+        <div class="base-layout">
+                      <!-- 左侧内容 -->
+          <div class="layout-main">
+            <div class="article-list-container">
+                <div class="article-list-body">
+                  <div class="article-card">
+                    <div class="article-card-title">
+                        <h1 class="article-card-h1" title="《记仇杯》第一季">排名情况</h1>
+                        </div>
+                        <div class="article-card-footer">
+                            <!-- <div class="mmv-topic-label-selector mmv-article-card__topics">
+                              <div class="mmv-topic-label-selector__item">
+                                <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                                  <span>优菈</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div  class=article-card-data>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liulanshu"></i>
+                              <span>9万+</span>
+                            </div>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                              <span>2269</span>
+                            </div>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-dianzan"></i>
+                              <span>2579</span>
+                            </div> -->
+                          </div>
+                          </div>
+                        <!-- <div class="article-page-updatetime">
+                            <span>发布时间：2022.09.20</span>
+                        </div> -->
+                        <!-- <ul class="nav nav-tabs" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#">高成本赛道</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#">八成本赛道</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#">三成本赛道</a>
+                          </li>
+                        </ul> -->
+                        <table class="rank-table">
+                          {% for record in records %}
+                          
+                          <tbody class="rank-list">
+                            <tr class="biaotou">
+                              <!-- <td>排名</td> -->
+                              <td>昵称</td>
+                              <td>赛道</td>
+                              <td>队伍配置</td>
+                              <td>视频</td>
+                              <td>Record</td>
+                            </tr>
+                            <tr class="player-info">
+                              <!-- <td class="rank">1</td> -->
+                              <td class="nicheng">{{record.author}}</td>
+                              <td>{{record.saidao}}</td>
+                              <td>{{record.teamcob}}</td>
+                            
+                              
+                              <td class="video-link">
+                                <a href="{{record.videolink}}" target="_blank">观看</a>
+                              </td>
+                              <td class="record">
+                                {{record.time_consume}}
+                              </td>
+                            </tr>
+                            <!-- <tr class="player-info">
+                              <td class="rank">1</td>
+                              <td class="nicheng">半刻QAQ</td>
+                              <td>
+                                <table class="team-comp">
+                                  <tbody>
+                                    <tr>
+                                      <td class="c1-1">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-2">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-3">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-4">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="w1-1">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-2">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-3">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-4">
+                                        <div class="mingzhizuo">5</div>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td class="video-link">
+                                <a href="https://www.bilibili.com/video/BV1ke4y1H71y/?spm_id_from=333.337.search-card.all.click&vd_source=7478e921a656dbf3ce9fd73e22139f15" target="_blank">观看</a>
+                              </td>
+                              <td class="record">
+                                47s
+                              </td>
+                            </tr>
+                            <tr class="player-info">
+                              <td class="rank">1</td>
+                              <td class="nicheng">半刻QAQ</td>
+                              <td>
+                                <table class="team-comp">
+                                  <tbody>
+                                    <tr>
+                                      <td class="c1-1">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-2">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-3">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-4">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="w1-1">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-2">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-3">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-4">
+                                        <div class="mingzhizuo">5</div>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td class="video-link">
+                                <a href="https://www.bilibili.com/video/BV1ke4y1H71y/?spm_id_from=333.337.search-card.all.click&vd_source=7478e921a656dbf3ce9fd73e22139f15" target="_blank">观看</a>
+                              </td>
+                              <td class="record">
+                                47s
+                              </td>
+                            </tr>
+                            <tr class="player-info">
+                              <td class="rank">1</td>
+                              <td class="nicheng">半刻QAQ</td>
+                              <td>
+                                <table class="team-comp">
+                                  <tbody>
+                                    <tr>
+                                      <td class="c1-1">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-2">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-3">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-4">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="w1-1">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-2">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-3">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-4">
+                                        <div class="mingzhizuo">5</div>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td class="video-link">
+                                <a href="https://www.bilibili.com/video/BV1ke4y1H71y/?spm_id_from=333.337.search-card.all.click&vd_source=7478e921a656dbf3ce9fd73e22139f15" target="_blank">观看</a>
+                              </td>
+                              <td class="record">
+                                47s
+                              </td>
+                            </tr>
+                            <tr class="player-info">
+                              <td class="rank">1</td>
+                              <td class="nicheng">半刻QAQ</td>
+                              <td>
+                                <table class="team-comp">
+                                  <tbody>
+                                    <tr>
+                                      <td class="c1-1">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-2">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-3">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                      <td class="c1-4">
+                                        <div class="mingzhizuo">6</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="w1-1">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-2">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-3">
+                                        <div class="mingzhizuo">5</div>
+                                      </td>
+                                      <td class="w1-4">
+                                        <div class="mingzhizuo">5</div>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td class="video-link">
+                                <a href="https://www.bilibili.com/video/BV1ke4y1H71y/?spm_id_from=333.337.search-card.all.click&vd_source=7478e921a656dbf3ce9fd73e22139f15" target="_blank">观看</a>
+                              </td>
+                              <td class="record">
+                                47s
+                              </td>
+                            </tr> -->
+                          </tbody>
+                          {% endfor %} 
+                        </table>
+                       
+                        </div>
+                    </div>
+
+
+                      </div>        
+        </div>
+        <div class="sub-layout">
+            <!-- 右侧发布栏 -->
+    <div class="home-post">
+      <div class="home-post-header">互动</div>
+      {% if session.username %}
+      <div class="home-post-block">
+        <p><button class="w3-button w3-yellow" onclick="window.location.href='/postpost'">加入讨论</button></p>
+        <p class="home-post-explain">快来发表对这场比赛的意见吧</p>
+      </div>
+      {% else %}
+      <div class="home-post-block">
+        <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+        <p class="home-post-explain">登录后可以发布内容</p>
+      </div>
+      {% endif %}
+      <!-- <div class="home-post-block">
+        <p><button class="w3-button w3-yellow">发起众筹</button></p>
+        <p class="home-post-explain">与志同道合的伙伴一起筹办比赛</p>
+      </div> -->
+    </div>
+            <!-- 作者 -->
+            <!-- <div class="article-page-author">
+                <a href="#" target="_blank">
+                    <div class="article-poster-avatar">
+                        <img src="../static/img/我的头像.jpg" alt="纯爱战士">
+                    </div>
+                </a>
+            <div class="article-poster-info">
+                <a href="#" target="_blank">
+                    <span>纯爱战士</span>
+                </a>
+            </div>
+            </div> -->
+
+          <div class="sub-recommend">
+              <div class="sub-recommend-header">
+                <h2 class="sub-recommend-header-title">赛事信息</h2>
+              </div>
+              <div class="sub-recommend-body">
+                <!-- 推荐1 -->
+                <div class="sub-recommend-list">
+                    <div class="sub-race-info-card">
+                      <a href="/currentrace-details" class="sub-race-info-card-link">
+                        <h5 class="sub-race-info-card-name">赛制详情</h5>
+                      </a>
+                    </div>
+          </div>
+          
+          <!-- 推荐2 -->
+          <div class="sub-recommend-list">
+            <div class="sub-race-info-card">
+              <a href="/race-rank" class="sub-race-info-card-link">
+                <h5 class="sub-race-info-card-name">排名情况</h5>
+              </a>
+            </div>
+  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+{% endblock %}

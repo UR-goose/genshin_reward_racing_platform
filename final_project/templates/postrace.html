@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+        <!-- 发布帖子 -->
+        <div class="login-layout">
+        <div class="container mt-3">
+            <h1>发布比赛</h1>
+            <div class="text-center">
+              {% if msg %}
+                 <div class="alert alert-warning" role="alert">{{msg}}</div>
+              {% endif %}
+          </div>
+            <form action="/postrace" method="POST">
+              <div class="mb-3 mt-3">
+                <label for="标题">比赛名称：</label>
+                <input type="text" class="form-control" id="article-title" placeholder="请输入比赛名称" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="内容">悬赏角色：</label>
+                <input type="text" class="form-control" id="article-title" placeholder="请输入悬赏角色" name="character">
+              </div>
+              <br>
+              <div class="mb-3">
+                <label for="日期">比赛开始时间：</label>
+              <input type="text" id="start" name="starttime">
+            </div>
+            <div class="mb-3">
+              <label for="日期">比赛结束时间：</label>
+            <input type="text" id="start" name="finishtime">
+          </div>
+              <div class="mb-3">
+                <label for="内容">前言：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入内容" name="qianyan" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">整体规则：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入规则" name="zhengtiguize" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">具体细则：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入规则" name="jutixize" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">赛道设置：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道1" name="saidao1" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道2" name="saidao2" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道3" name="saidao3" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道4" name="saidao4" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道5" name="saidao5" rows="1"></textarea>
+                 <textarea class="form-control" id="editor" placeholder="请输入赛道6" name="saidao6" rows="1"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">赛道说明：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入说明" name="saidaoshuoming" rows="10"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="内容">奖励说明：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入说明" name="jianglishuoming" rows="10"></textarea>
+              </div>
+                    <!-- <div class="content-img">
+                      <ul class="content-img-list">
+                        <li class="content-img-list-item"><img src="https://www.baidu.com/img/bd_logo1.png" alt=""><a class="delete-btn"><i class="ico-delete"></i></a></li> -->
+                      </ul>
+                      <!-- <div class="file">
+                        <i class="ico-plus"></i>上传海报：支持jpg/png<input type="file" name="file" accept="image/*" id="upload" >
+                      </div>	 -->
+                    </div> -->
+                    <br> 
+                    <div class="mb-3">
+                      <label for="内容">奖金总额（元）：</label>
+                    <input type="number" id="tentacles" name="jiangjinzonge">
+                  </div>
+                    <br>
+                    <div><p>备注：点击支付即表明您同意支付奖金总额的3%给平台作为使用该平台的费用。</p></div>
+
+              <!-- <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> 记住我
+                </label>
+              </div> -->
+              <button type="submit" class="btn btn-primary">确认支付</button>
+            </form>
+          </div>
+        </div>
+{% endblock %}

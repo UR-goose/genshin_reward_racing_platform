@@ -1,0 +1,636 @@
+@import './/iconfont.css';
+@import './/animation.css';
+* {
+    box-sizing: border-box;
+    outline:none;
+  }
+  
+  body {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+    font-size:10px;
+
+  }
+  div {
+    display:block;
+  
+  }
+    /* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  /* .nav-item{
+    display:flex;
+    align-items:center;
+    justify-content: right;
+  } */
+  
+  /* 左侧layout */
+.base-layout {
+  width:80%;
+  margin:auto;
+  padding-left: 8%;
+  padding-right:8%;
+  box-sizing: content-box;
+}
+.layout-main {
+  float: left;
+  width: 68%;
+}
+/* 轮播图 */
+#demo {
+  position:relative;
+  /* width:700px;
+  height:254px; */
+  overflow:hidden;
+  border:100px;
+  margin-top: 50px;
+  margin-bottom: 3%;
+}
+
+/* 左侧众筹列表 */
+.article-list-container {
+  background-color: #fff;
+  border-radius: 4px;
+}
+.article-card {
+  border-top:1px solid #ebebeb;
+  padding:24px 30px;
+}
+.article-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+.article-card-userinfo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.article-card-user {
+  display: flex;
+  align-items: center;
+}
+.user-card-link {
+  color: #666;
+  display: inline-flex;
+  align-items: center;
+}
+.user-card-avater {
+  display: inline-block;
+  position: relative;
+}
+.avatar-img { 
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  border: 1px solid #ebebeb;
+  vertical-align: top;
+
+}
+.user-card-info {
+  display: inline-block;
+  margin-left: -550px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.account-user-card-link {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 20px;
+  /* vertical-align: top; */
+  color: #666;
+  align-items: center;
+  vertical-align: middle;
+}
+.account-user-card-name {
+  font-size: 0.5em;
+  
+}
+.post-time {
+  color: #ccc;
+  margin-left: 12px;
+  font-size: 0.5em;
+  margin-bottom:0;
+}
+.article-card-title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 10%;
+}
+.article-card-h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.5em;
+  line-height: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.article-card-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 18px;
+  margin-top: 8px;
+  color: #999;
+}
+.article-card-footer {
+  margin-top: 7px;
+  display: flex;
+}
+.mmv-article-card__topics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mmv-article-card__topics .mmv-topic-label-selector__item {
+  margin-top: 5px;
+}
+.mmv-topic-label-selector__item {
+  height: 24px;
+  line-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  color: #666;
+  border-radius: 8px;
+  margin-right: 10px;
+  background-color: #f5f5f5;
+  position: relative;
+  cursor: pointer;
+}
+.mmv-topic-label-selector__link {
+  display: inline-block;
+  color: inherit;
+  padding: 0 12px;
+  font-size: 0.5em;
+
+}
+
+.article-card-data{
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 20%;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-top: 5px;
+
+}
+.article-card-data-item {
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+  color: #b2b2b2;
+  font-size: 1em;
+  flex-shrink: 0;
+}
+.article-list-footer {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ebebeb;
+}
+/* 加载更多 */
+.loadmore button {
+  color: #4cc3ff;
+  padding: 10px 0;
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    font-weight: inherit;
+    line-height: inherit;
+
+}
+
+
+
+/* 右侧layout */
+.sub-layout {
+  float:right;
+  width:30%;
+}
+/* 主页发布栏 */
+.home-post {
+  display:flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding:0 10px;
+  background-color: #fff;
+  border-radius:4px;
+  width:100%;
+  height:254px;
+}
+.home-post-header {
+  height:50px;
+  border-bottom: 1px dashed #ebebeb;
+  text-align: center;
+  line-height: 50px;
+  font-size:1.5em;
+  font-weight:600;
+}
+.home-post-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex:1;
+}
+.w3-button {
+  display:block;
+  margin:0 auto;
+  width:55%;
+  height:40px;
+  border-radius:4px;
+  margin-top: 0px;
+  font-size:1.5em;
+  font-weight:600;
+}
+.home-post-explain {
+  font-size: 0.5rem;
+  color: #999;
+  margin-top: 10px;
+  word-break: break-all;
+  line-height: 1;
+  display: block;
+  margin:0 auto;
+  margin-top: -10px ;
+  
+}
+/* 右侧活动列表 */
+.sub-recommend {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom:10%;
+}
+.sub-recommend-header {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #ebebeb;
+  padding: 0 20px;
+  align-items: center;
+}
+.sub-recommend-header-title {
+  flex-grow: 1;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.sub-recommend-title-link {
+  color: #999;
+  text-decoration: none;
+  outline: none;
+}
+.sub-recommend-body {
+  position: relative;
+  padding: 20px;
+
+}
+.sub-recommend-list {
+  padding-bottom: 10px;
+}
+.sub-recommend-list-card {
+  display: flex;
+  align-items: center;
+  margin-top:20px;
+}
+.sub-recommend-list-card-cover {
+  color: #333;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+}
+.sub-recommend-list-card-info{
+  margin-left: 10px;
+  display: inline-block;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.sub-recommend-list-card-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.sub-recommend-list-card-name {
+  position: relative;
+  line-height: 20px;
+}
+
+/* 页脚 */
+.footer {
+  width: 100%;
+  text-align: center;
+  background: #2d2f33;
+  padding: 40px 0;
+  display: flex;
+}
+.footer__inner {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: content-box;
+
+}
+.footer__copyright {
+  font-size: 1em;
+  line-height: 24px;
+  color: #666;
+  text-align: center;
+}
+
+/* 页面自适应 */
+    @media screen and (max-width: 850px) {
+      .layout-main { width:100%;
+      
+      }
+      .sub-layout{ width:100%;}
+      body{font-size:5px;}
+  }
+
+/* input页面 */
+.login-layout {
+  width: 60%;
+  align-items: center;
+  background-color: #fff;
+  position:relative;
+  margin:auto;
+
+
+}
+.container{
+ width:80%;
+}
+  .container-login {
+    display: block;
+    width:60%;
+    margin:auto;
+    padding-left: 8%;
+    padding-right:8%;
+    box-sizing: content-box;
+  }
+#demo-login {
+  width:100%;
+  position:relative;
+  /* width:700px;
+  height:254px; */
+  overflow:hidden;
+  border:100px;
+  margin-top: 50px;
+  margin-bottom: 3%;}
+  
+  .btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+
+/* 比赛列表 */
+  .race-list-container {
+    width:100%;
+    margin:auto;
+    padding-left: 8%;
+    padding-right:8%;
+    box-sizing: content-box;
+    /* background-color: #fff; */
+    font-size: 1em;
+  }
+  .race-list-container h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 6%;
+  }
+  .card {
+    float:left;
+    margin:1%;
+  }
+
+  .article-page-container {
+    padding: 40px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  /* 帖子或比赛或众筹详情 */
+  .article-card-data-info {
+    height: 40px;
+    padding: 0 15px;
+    background-color: #f7f8fc;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+.articledetails-card-data-count{
+  flex-shrink: 0;
+  display: inline-flex;
+}
+.article-page-updatetime {
+  text-align: center;
+  color: #ccc;
+  margin-top: 20px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.race-content {
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+  line-height: 18px;
+  margin-top: 8px;
+  font-size:1.5em;
+  line-height: 30px;
+}
+.content-details {
+  margin-bottom: 30px;
+}
+.article-page-author {
+  padding: 0 20px 0 30px;
+  height: 160px;
+  background-color: #fff;
+  display: flex;
+  margin-top:20px;
+  border-radius: 4px;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.article-poster-avatar {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  position: relative;
+}
+.article-poster-avatar img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #ebebeb;
+  vertical-align: top;
+}
+.article-poster-info {
+  margin-left: 15px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+.article-poster-info a {
+  display: inline-block;
+  line-height: 14px;
+  color: #666;
+  align-items: center;
+  -webkit-box-align: center;
+}
+.article-poster-info span {
+  line-height: 22px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 6px;
+  white-space: normal;
+  display: inline;
+}
+
+/* rank-list */
+.rank-table {
+  width:100%;
+  border:0;
+  display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+.rank-list {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.biaotou,
+.rank-table tr{
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+
+}
+.rank-table td{
+  height: 40px;
+  background-size: 100% 100%;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.biaotou{
+  font-weight: 600;
+}
+.rank {
+  width:8%;
+}
+.nicheng {
+  width:17%;
+}
+.team-comp {
+  width:37%;
+}
+.video-link {
+  width:8%;
+}
+.record {
+  width:10%;
+}
+.mingzhizuo {
+  position: relative;
+  width: 10px;
+  height: 20px;
+  background-color: gray;
+  left: 30px;
+  top: 10px;
+  color:#fff;
+}
+.c1-1 {
+  background-image: url(../img/优菈.png);
+}
+.c1-2{
+  background-image: url(../img/夜兰.png);
+}
+.c1-3 {
+  background-image: url(../img/枫原万叶.png);
+}
+.c1-4 {
+  background-image: url(../img/丽莎.png);
+}
+.w1-1 {
+  background-image: url(../img/松籁响起之时.png)
+
+}
+.w1-2 {
+  background-image: url(../img/若水.png)
+
+}
+.w1-3 {
+  background-image: url(../img/苍古自由之誓.png)
+
+}
+.w1-4 {
+  background-image: url(../img/讨龙英杰谭.png)
+
+}
+
+/* 评论区 */
+.comment-mb-3 {
+  width:80%;
+  margin:auto;
+}
+
+/* 个人主页 */
+.profile-mb-3 {
+  width:80%;
+  margin:auto;
+}
+.sub-recommend-list-card-name {
+  margin-bottom:0;
+}
+
+.profile-submit button {
+  margin-left:43%;}
+  .file{
+    margin-left:10%;
+  }
+
+

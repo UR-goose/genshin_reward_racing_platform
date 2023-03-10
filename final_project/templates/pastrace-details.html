@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+    <div class="body_container">
+        <div class="base-layout">
+                      <!-- 左侧内容 -->
+          <div class="layout-main">
+            <div class="article-list-container">
+                <div class="article-list-body">
+                  <div class="article-card">
+                    <div class="article-card-title">
+                        <h1 class="article-card-h1" title="《记仇杯》第一季">《记仇杯》第一季</h1>
+                        </div>
+                        <div class="article-card-footer">
+                            <div class="mmv-topic-label-selector mmv-article-card__topics">
+                              <div class="mmv-topic-label-selector__item">
+                                <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                                  <span>优菈</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div  class=article-card-data>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liulanshu"></i>
+                              <span>9万+</span>
+                            </div>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                              <span>2269</span>
+                            </div>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-dianzan"></i>
+                              <span>2579</span>
+                            </div>
+                          </div>
+                          </div>
+                        <!-- <div class="article-page-updatetime">
+                            <span>发布时间：2022.09.20</span>
+                        </div> -->
+                        <div class="container mt-3">
+                          <img class="img-fluid" src="{{ url_for('static', filename='img/《记仇杯》第一季.jpg') }}" alt="《记仇杯》第一季" width=100% > 
+                        </div>
+                        <div class="race-content">
+                            <div class="content-details">
+                                From：NGA
+                          </div>
+                          <div class="content-details">
+                            <b>比赛时间：</b>2022-09-06至2022-09-30
+                      </div>
+                            <div class="content-details">
+                                <h2>前言</h2>
+                                3.0开始潭里的15c不再举办了，只剩马杯了，然而马杯也没有优菈赛道，作为一个老年人也比较抗拒QQ更爱泥潭，就想着干脆自己搞个优菈赛道的竞速比赛。<br>
+                                与其他角色一起比的话，优菈很难出成绩，可能也劝退了不少配置不够但想尝试的优菈玩家，本帖为优菈专设多个赛道，希望能让更多喜欢优菈想用优菈好好打深渊的不同配置玩家能参与和交流，让竞速不那么强势的角色也有发光的地方。
+                                (这一季先试试水，每个赛道能有一个玩家就算成功！下一季正值复刻希望能有更多人参加，也希望能吸引更多的优菈玩家。 当然没啥人参与的话就没下次了T T 。)
+                          </div>
+                          <div class="content-details">
+                            <h2>整体规则</h2>
+                            优菈主C3.0深渊下半三间连打
+                      </div>
+                      <div class="content-details">
+                        <h2>具体细则</h2>
+                        1、比赛设 [高配赛道]、[八成本赛道]、[三成本赛道] 三个赛道。每个赛道，第一名大月卡一张(68)，第二名小月卡一张(30)，以及随机抽一位参与奖小月卡一张(30)，同成绩按提交顺序顺延名次。<br>
+                        2、参赛采用B站投稿、本贴回复的方式，本季截止日期9月30日晚0点，参考回复模板：八成本赛道，77s，优雷修班，17楼，BVc1h2s3m4j5q6y7l(同时一定要附上成本说明)，更新成绩新回复17楼更新即可。<br>
+                        3、懒得扯皮加上优菈赛道也不卷那一秒两秒，计算时间一律以整数秒相减，不考虑跳秒。视频一律需要真连打，血量完全对的上，哪怕你能证明充能对的上也不行，懒得扯皮和验证。视频需附上面板录屏。<br>
+                        4、每位玩家只取一个成绩，比如你可以多阵容多赛道都参加，只取最好的一个。<br>
+                        5、必须要有优菈上场，且优菈每间至少释放一次元素爆发。要求放Q而不是伤害占比，本意是保证优菈戏份同时希望多样性，比如多核或新体系，但要是明显优菈就是来凑数取巧的，就没必要来啦。
+                        </div>
+                        <div class="content-details">
+                            <h2>赛道设置</h2>
+                            赛道一：高配赛道<br>
+                            赛道二：八成本赛道<br>
+                            赛道三：三成本赛道<br>
+                            </div>
+                            <div class="content-details">
+                                <h2>赛道说明</h2>
+                                高配赛道细则：<br>
+                            1、无成本限制，无深渊BUFF限制，高配赛道允许三间有一间优菈不放Q。<br>
+                            <br>
+
+                            八成本赛道细则：<br>
+                            1、优菈需非满命，0、1、3命各算1成本，2、4、5命不算成本。<br>
+                            2、其他五星角色命座最高不能超过3命，避免一个6命夜兰杀完了。其他五星角色每一个命座算1成本。特殊情况可说明申请。四星角色不限。七七不算成本。<br>
+                            3、五星武器，精1算1成本，精2精3均算2成本，精4精5均算3成本。四星武器不限。<br>
+                            4、伤害类以及元素充能效率的深渊BUFF，1成本1个。<br>
+                            <br>
+                            三成本赛道细则：<br>
+                            1、深渊BUFF不算成本，其他成本规则与八成本赛道相同。<br>
+                                </div>
+                                <div class="content-details">
+                                    <h2>奖励</h2>
+                                    每个赛道，第一名大月卡一张(68)，第二名小月卡一张(30)，以及随机抽一位参与奖小月卡一张(30)
+                                    </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+                      </div>        
+        </div>
+        <div class="sub-layout">
+            <!-- 右侧发布栏 -->
+    <div class="home-post">
+      <div class="home-post-header">互动</div>
+      {% if session.username %}
+      <div class="home-post-block">
+        <p><button class="w3-button w3-yellow" onclick="window.location.href='/postpost'">加入讨论</button></p>
+        <p class="home-post-explain">快来发表对这场比赛的意见吧</p>
+      </div>
+      {% else %}
+      <div class="home-post-block">
+        <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+        <p class="home-post-explain">登录后可以发布内容</p>
+      </div>
+      {% endif %}
+      <!-- <div class="home-post-block">
+        <p><button class="w3-button w3-yellow">发起众筹</button></p>
+        <p class="home-post-explain">与志同道合的伙伴一起筹办比赛</p>
+      </div> -->
+    </div>
+            <!-- 作者 -->
+            <!-- <div class="article-page-author">
+                <a href="#" target="_blank">
+                    <div class="article-poster-avatar">
+                        <img src="../static/img/我的头像.jpg" alt="纯爱战士">
+                    </div>
+                </a>
+            <div class="article-poster-info">
+                <a href="#" target="_blank">
+                    <span>纯爱战士</span>
+                </a>
+            </div>
+            </div> -->
+
+          <div class="sub-recommend">
+              <div class="sub-recommend-header">
+                <h2 class="sub-recommend-header-title">赛事信息</h2>
+              </div>
+              <div class="sub-recommend-body">
+                <!-- 推荐1 -->
+                <div class="sub-recommend-list">
+                    <div class="sub-race-info-card">
+                      <a href="/currentrace-details" class="sub-race-info-card-link">
+                        <h5 class="sub-race-info-card-name">赛制详情</h5>
+                      </a>
+                    </div>
+          </div>
+          
+          <!-- 推荐2 -->
+          <div class="sub-recommend-list">
+            <div class="sub-race-info-card">
+              <a href="/race-rank" class="sub-race-info-card-link">
+                <h5 class="sub-race-info-card-name">排名情况</h5>
+              </a>
+            </div>
+  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+{% endblock %}
+

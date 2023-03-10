@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+
+    <div class="body_container">
+        <div class="base-layout">
+          <div class="sub-layout">
+            <!-- 作者 -->
+            {% for post in posts %}
+             <div class="article-page-author">
+               <a href="#" target="_blank">
+                  <div class="article-poster-avatar">
+                      <img src="{{ url_for('static', filename='img/我的头像.jpg') }}" alt="纯爱战士">
+                   </div>
+                </a>
+                <div class="article-poster-info">
+                   <a href="#" target="_blank">
+                     <span>{{ post['author']}}</span>
+                   </a>
+                </div>
+              </div>
+            </div>
+                      <!-- 左侧内容 -->
+          <div class="layout-main">
+            <div class="article-list-container">
+                <div class="article-list-body">
+                  <div class="article-card">
+                    <div class="article-card-title">
+                        <h1 class="article-card-h1" title="title">{{ post['title'] }}</h1>
+                        </div>
+                        <div class="article-card-footer">
+                            <div class="mmv-topic-label-selector mmv-article-card__topics">
+                              <div class="mmv-topic-label-selector__item">
+                                <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                                  <span>{{ post['racename1'] }}</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div  class=article-card-data>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liulanshu"></i>
+                              <span>{{post['views']}}</span>
+                            </div>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                              <span>{{comment_count}}</span>
+                            </div>
+                            <!-- <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-dianzan"></i>
+                              <span>2579</span>
+                            </div> -->
+                          </div>
+                          </div>
+                        <div class="article-page-updatetime">
+                            <span>发布时间：{{ post['post_date'] }}</span>
+                        </div>
+                        <div class="race-content">
+                            <div class="content-details">
+                              {{ post['body'] | safe }}
+                          </div>
+                        </div>
+                        {% endfor %}
+                        </div>
+            <!-- 评论区 -->
+            <div class="article-card">
+              <!-- 评论1 -->
+              {% for message in comment %}
+              <div class="article-card-header">
+                <div class="article-card-userinfo">
+                  <div class="article-card-user">
+                    <a href="#" class="user-card-link" target="_blank">
+                      <div class="user-card-avater">
+                        <img class="avatar-img" src="{{ url_for('static', filename='img/我的头像.jpg') }}" alt="头像">
+                      </div>
+                    </a>
+                    <div class="user-card-info">
+                      <a href="#" class="account-user-card-link" target="blank" title="纯爱战士">
+                        <span class="account-user-card-name">{{message.name}}</span>
+                      </a>
+                    </div>
+                    <!-- <div>
+                      <p class="post-time">11-23</p>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+
+                  <div class="content-details">
+                    {{message.message}}
+                  </div>
+                </div>
+                    </div>
+                {% endfor %}
+
+                    <div class="comment-mb-3">
+                      {% if session.username %}
+                      <form method="POST">
+                      <input type="hidden" name="name" class="form-control" id="name" value="{{session.username}}">
+                      <label for="内容">评论内容：</label>
+                       <textarea class="form-control" id="editor" placeholder="请输入评论" name="message" rows="3"></textarea>
+                       <button type="submit" class="btn btn-primary">发布评论</button>
+                      </form>
+                       {% else %}
+                       <div class="home-post-block">
+                        <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+                        <p class="home-post-explain">登录后可以发布内容</p>
+                      </div>
+                       {% endif %}
+                    </div>
+
+                      </div>        
+        </div>
+        
+
+          </div>
+
+        </div>
+
+
+{% endblock %}

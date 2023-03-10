@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+        <!-- 发布帖子 -->
+        <div class="login-layout">
+        <div class="container mt-3">
+            <h1>发布帖子</h1>
+            <div class="text-center">
+              {% if msg %}
+                 <div class="alert alert-warning" role="alert">{{msg}}</div>
+              {% endif %}
+          </div>
+            <form action="/postpost" method="POST">
+              <div class="mb-3 mt-3">
+                <label for="标题">标题：</label>
+                <input type="text" class="form-control" id="article-title" placeholder="请输入标题" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="内容">内容：</label>
+                 <textarea class="form-control" id="editor" placeholder="请输入内容" name="body" rows="15"></textarea>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="标题">请标注关注的赛事:</label>
+                <input type="text" class="form-control" id="article-title" placeholder="请标注关注的赛事" name="racename1">
+                </div>
+              <div class="mb-3 mt-3">
+              <label for="标题">请标注帖子类型（例：活动吐槽、赛制建议等）:</label>
+              <input type="text" class="form-control" id="article-title" placeholder="请标注帖子类型" name="types">
+              </div>
+              <br>
+            <!-- <label for="sel1" class="form-label">请选择想加入讨论的赛事：</label>
+                    <select class="form-select" id="sel1" name="racename1">
+                      
+                      <option>《记仇杯》第一季</option>
+                      <option>《记仇杯》第二季</option>
+                      <option>泥潭阿努比斯杯</option>
+                      <option>《眠龙杯》第一季</option>
+                        
+                    </select>
+                    <br> -->
+
+              <!-- <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> 记住我
+                </label>
+              </div> -->
+              <button type="submit" class="btn btn-primary">确认发布</button>
+            </form>
+          </div>
+        </div>
+        {% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+
+    <div class="body_container">
+        <div class="base-layout">
+                      <!-- 左侧内容 -->
+          <div class="layout-main">
+            <div class="article-list-container">
+                <div class="article-list-body">
+                  <div class="article-card">
+                    <div class="article-card-title">
+                        <h1 class="article-card-h1" title="常见问题">常见问题</h1>
+                        </div>
+
+                        <div class="race-content">
+                            <div class="content-details">
+                                Q1: 原神“剑斗绮谭“俱乐部是一个什么样平台？<br>
+                                A1: 原神“剑斗绮谭“俱乐部是专门为喜欢竞速的原神玩家搭建的交流与服务平台，玩家可以在这里尽情交换有关于角色强度的意见，并且募集志同道合的伙伴一起悬赏并发起一场紧张刺激的竞速大挑战~
+                          </div>
+                          <div class="content-details">
+                            Q2: 如何使用众筹功能？<br>
+                            A2: 玩家可以通过”悬赏“页面中的众筹版块选择发起众筹或是参与他人的众筹。点击“参与众筹”后，玩家可以看到筹备群的二维码扫码入群
+                      </div>
+                      <div class="content-details">
+                        Q3: 如何申请使用平台的选手竞速信息审核服务？<br>
+                        A3: 选手竞速信息审核服务属于平台的进阶付费功能，如果赛事发起者是付费会员，那么平台的审核员会在赛事发起后的三个工作日内通过私信联系赛事发起者，与发起者协商审核的需求。因此请发起者在发布赛事后注意查看私信哦~
+                  </div>
+                  <div class="content-details">
+                    Q4: 如果我发起赛事后，参赛人员少于预设的获奖人数，奖池中的剩余金额是否会退还？<br>
+                    A4: 会的。如果赛事结束后，参赛人员没有达到预设的获奖人数，那么赛事奖池中剩下的金额将会返还至发起者的支付账户，但平台依旧会扣取此次比赛的发布手续费用。
+              </div>
+          <!-- <div class="content-details">
+            Q5:发起赛事是否一定要准备赛事海报？<br>
+            A5:非必须。但是准备赛事海报更可能登上网站主页，让更多的人看到你的赛事活动~
+      </div> -->
+
+                        </div>
+                        </div>
+                    </div>
+
+
+                      </div>        
+        </div>
+        <div class="sub-layout">
+            <!-- 右侧发布栏 -->
+            <div class="home-post">
+              {% if session.username %}
+              <div class="home-post-header">发布</div>
+              <div class="home-post-block">
+                <p><button class="w3-button w3-yellow" onclick="window.location.href='/postrace'">发起比赛</button></p>
+                <p class="home-post-explain">为你心爱的角色发起悬赏</p>
+              </div>
+              <div class="home-post-block">
+                <p><button class="w3-button w3-yellow" onclick="window.location.href='/post-zhongchou'">发起众筹</button></p>
+                <p class="home-post-explain">与志同道合的伙伴一起筹办比赛</p>
+              </div>
+              {% else %}
+              <div class="home-post-block">
+                <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+                <p class="home-post-explain">登录后可以发布内容</p>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+        </div>
+
+
+
+        {% endblock %}

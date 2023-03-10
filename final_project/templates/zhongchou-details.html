@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+    <div class="body_container">
+        <div class="base-layout">
+                      <!-- 左侧内容 -->
+          <div class="layout-main">
+            <div class="article-list-container">
+                <div class="article-list-body">
+                  <div class="article-card">
+                    {% for zhongchou in zhongchoulist %}
+                    <div class="article-card-title">
+                        <h2 class="article-card-h1">{{zhongchou['title'] }}</h2>
+                        </div>
+                        <div class="article-card-footer">
+                            <div class="mmv-topic-label-selector mmv-article-card__topics">
+                              <div class="mmv-topic-label-selector__item">
+                                <a href="" class="mmv-topic-label-selector__link" target="_blank">
+                                  <span>{{zhongchou['character']}}</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div  class=article-card-data>
+                            <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liulanshu"></i>
+                              <span>{{zhongchou['views']}}</span>
+                            </div>
+                            <!-- <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-liuyanshu"></i>
+                              <span>2269</span>
+                            </div> -->
+                            <!-- <div class="article-card-data-item">
+                              <i class="mmv-icon iconfont icon-dianzan"></i>
+                              <span>2579</span>
+                            </div> -->
+                          </div>
+                          </div>
+                        <div class="article-page-updatetime">
+                            <span>发布时间：{{ zhongchou['post_date'] }}</span>
+                        </div>
+                        <div class="race-content">
+                            <div class="content-details">
+                              <br>
+                              {{ zhongchou['body'] | safe }}
+                          </div>
+                          <div class="content-details">
+                            <br>
+                            {{ zhongchou['groupinfo'] }}
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                      </div>        
+        </div>
+        <div class="sub-layout">
+
+          <!-- 作者 -->
+          {% for zhongchou in zhongchoulist %}
+           <div class="article-page-author">
+             <a href="/personal-profile/{{session.username}}" target="_blank">
+                <div class="article-poster-avatar">
+                    <img src="../static/img/我的头像.jpg" alt="纯爱战士">
+                 </div>
+              </a>
+              <div class="article-poster-info">
+                 <a href="/personal-profile/{{session.username}}" target="_blank">
+                   <span>{{zhongchou['author']}}</span>
+                   <!-- <span>point</span> -->
+                 </a>
+              </div>
+            </div>
+            {% endfor %}
+
+     <div class="home-post">
+       <div class="home-post-header">互动</div>
+       {% if session.username %}
+       <div class="home-post-block">
+        <p><button class="w3-button w3-yellow" onclick="window.location.href='/post-zhongchou'">发起众筹</button></p>
+        <p class="home-post-explain">与志同道合的伙伴一起筹办比赛</p>
+      </div>
+       {% else %}
+       <div class="home-post-block">
+        <p><button class="w3-button w3-yellow" onclick="window.location.href='/login'">请先登录</button></p>
+        <p class="home-post-explain">登录后可以发布内容</p>
+      </div>
+       {% endif %}
+     </div>
+             </div>
+
+          
+      </div>
+
+        </div>
+
+
+
+{% endblock %}
+

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+    <div class="race-list-container">
+        <h1>往期赛事</h1>   
+        <div class="container mt-3">
+            <div class="card" style="width:250px">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/第一届钟离“伊布”杯.jpg') }}" alt="比赛图片" style="width:248px;height:140px;">
+              <div class="card-body">
+                <h4 class="card-title">第一届钟离“伊布”杯</h4>
+                <p class="card-text">悬赏角色：钟离</p>
+                <p class="card-text">比赛时间：11.01-11.15</p>
+                <p class="card-text">From: NGA</p>
+                <a href="https://bbs.nga.cn/read.php?tid=34027676&fav=646cdec5" class="btn btn-primary">查看详情</a>
+                <!-- <a href="#" class="btn btn-primary">我要参赛</a> -->
+              </div>
+            </div>
+
+            <div class="card" style="width:250px">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/默认.jpg') }}" alt="默认" style="width:248px;height:140px;">
+                <div class="card-body">
+                  <h4 class="card-title">《凝水盛放杯》</h4>
+                  <p class="card-text">悬赏角色：达达利亚</p>
+                  <p class="card-text">比赛时间：10.27-11.15</p>
+                  <p class="card-text">From: NGA</p>
+                  <a href="https://bbs.nga.cn/read.php?tid=34035529" class="btn btn-primary">查看详情</a>
+                  <!-- <a href="#" class="btn btn-primary">我要参赛</a> -->
+                </div>
+              </div>
+
+              <div class="card" style="width:250px">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/《眠龙杯》第一季.jpg') }}" alt="比赛图片" style="width:248px;height:140px;">
+                <div class="card-body">
+                  <h4 class="card-title">《眠龙杯》第一季</h4>
+                  <p class="card-text">悬赏角色：珊瑚宫心海</p>
+                  <p class="card-text">比赛时间：10.16-11.01</p>
+                  <p class="card-text">From: NGA</p>
+                  <a href="https://bbs.nga.cn/read.php?tid=33844574" class="btn btn-primary">查看详情</a>
+                  <!-- <a href="#" class="btn btn-primary">我要参赛</a> -->
+                </div>
+              </div>
+
+              <div class="card" style="width:250px">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/《记仇杯》第二季.jpg') }}" alt="比赛图片" style="width:248px;height:140px;">
+                <div class="card-body">
+                  <h4 class="card-title">《记仇杯》第二季</h4>
+                  <p class="card-text">悬赏角色：优菈</p>
+                  <p class="card-text">比赛时间：10.01-10.31</p>
+                  <p class="card-text">From: NGA</p>
+                  <a href="https://bbs.nga.cn/read.php?tid=33693724&fav=9cbbbce0" class="btn btn-primary">查看详情</a>
+                  <!-- <a href="#" class="btn btn-primary">我要参赛</a> -->
+                </div>
+              </div>
+
+              <div class="card" style="width:250px">
+                <img class="card-img-top" src="{{ url_for('static', filename='img/《记仇杯》第一季.jpg') }}" alt="《记仇杯》第一季" style="width:248px;height:140px;">
+                <div class="card-body">
+                  <h4 class="card-title">《记仇杯》第一季</h4>
+                  <p class="card-text">悬赏角色：优菈</p>
+                  <p class="card-text">比赛时间：09.06-09.30</p>
+                  <p class="card-text">From: NGA</p>
+                  <a href="https://bbs.nga.cn/read.php?tid=33384174&fav=8a876880" class="btn btn-primary">查看详情</a>
+                  <!-- <a href="#" class="btn btn-primary">我要参赛</a> -->
+                </div>
+              </div>
+
+        </div>
+    </div>
+{% endblock %}
